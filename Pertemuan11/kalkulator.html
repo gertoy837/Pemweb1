@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+
+</head>
+<body>
+    <h1>Kalkulator Sederhana</h1>
+
+    <label for="bil1">Masukkan Bilangan 1 : </label>
+    <input type="number" name="bil1" id="bil1">
+    <br>
+    <label for="bil2">Masukkan Bilangan 2 : </label>
+    <input type="number" name="bil2" id="bil2">
+    <br>
+    <label>Pilih Operasi Aritmatika : </label>
+    <input type="radio" name="operasi" value="tambah" id="tambah"> <label for="tambah">+</label>
+    <input type="radio" name="operasi" value="kurang" id="kurang"> <label for="kurang">-</label>
+    <input type="radio" name="operasi" value="bagi" id="bagi"> <label for="bagi">/</label>
+    <input type="radio" name="operasi" value="kali" id="kali"> <label for="kali">x</label>
+    <br>
+    <input type="button" value="Hitung" onclick="kalkulator()">
+
+    <p>Hasil : <span id="hasil">0</span></p>
+
+    <script>
+        function kalkulator() {
+            let bil1 = parseInt(document.getElementById('bil1').value);
+            let bil2 = parseInt(document.getElementById('bil2').value);
+            let operasi = document.querySelector('input[name=operasi]:checked').value;
+            let hasil = document.querySelector('#hasil')
+
+            switch (operasi) {
+                case 'tambah':
+                    hasil.innerHTML = bil1 + bil2;
+                    break;
+                case 'kurang':
+                    hasil.innerHTML = bil1 - bil2;
+                    break;
+                case 'bagi':
+                    hasil.innerHTML = bil1 / bil2;
+                    break;
+                    // if (bil2 == 0) {
+                    //     alert('Tidak bisa membagi dengan nol');
+                    //     hasil.innerHTML = '0';
+                    // } else {
+                        // hasil.innerHTML = bil1 / bil2;
+                    // }
+                    // break;
+                default:
+                    hasil.innerHTML = bil1 * bil2;
+                    break;
+                // case 'kali':
+                //     hasil.innerHTML = bil1 * bil2;
+                //     break;
+                // default:
+                //     alert('Pilih operasi aritmatika');
+                //     hasil.innerHTML = '0';
+                //     break;
+            }
+        }
+    </script>
+</body>
+</html>

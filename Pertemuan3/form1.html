@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi1</title>
+</head>
+
+<body>
+    <h1>Form Registrasi1</h1>
+    <form action="registrasi.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Formulir Biodata Pribadi</legend>
+            <div>
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" name="nama" id="nama" value="" required>
+                <span style="color: red;">*</span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="" required>
+                <span style="color: red;">*</span>
+            </div>
+            <div>
+                <label for="tglLahir">Tanggal Lahir</label>
+                <input type="date" name="tglLahir" id="tglLahir" value="">
+            </div>
+            <div>
+                <label for="jenisKelamin">Jenis Kelamin</label>
+                <input type="radio" name="jenisKelamin" value="L" id="jenisKelamin" checked>Laki Laki
+                <input type="radio" name="jenisKelamin" value="P" id="jenisKelamin">Perempuan
+            </div>
+            <div>
+                <label for="prodi">Pilihan Program Studi</label>
+                <select name="prodi" id="prodi">
+                    <option value="TI">Teknik Informatika</option>
+                    <option value="SI">Sistem Informasi</option>
+                    <option value="BD">Bisnis Digital</option>
+                </select>
+            </div>
+            <div>
+                <label for="alamat">Alamat</label>
+                <textarea name="alamat" id="alamat" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="hobi">Hobi</label>
+                <input type="checkbox" name="hobi[]" id="hobi" value="Membaca">Membaca
+                <input type="checkbox" name="hobi[]" id="Nonton Bola" value="Membaca">Nonton Bola
+                <input type="checkbox" name="hobi[]" id="Nonton Drakor" value="Membaca">Nonton Drakor
+                <input type="checkbox" name="hobi[]" id="Traveling" value="Membaca">Traveling
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Survei</legend>
+            <div>
+                <label for="warna">Warna</label>
+                <input type="color" name="warna" id="warna" value="">
+            </div>
+            <div>
+                <label for="nilaiWeb">Skill HTML/CSS</label>
+                <input type="range" name="nilaiWeb" id="nilaiWeb" value="" min="0" max="100">
+            </div>
+            <div>
+                <label for="upload">Upload File</label>
+                <input type="file" name="upload" id="upload" value="">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <input type="submit" value="Daftar" name="proses">
+            <input type="reset" value="Batal" name="proses">
+        </fieldset>
+    </form>
+</body>
+
+</html>

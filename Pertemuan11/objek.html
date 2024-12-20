@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+    <script>
+        let jagoan = {
+            nama : "Goku",
+            power : 10000,
+            makan : function(kalori) {
+                this.power = this.power + kalori;
+            },
+            pukul : function(kekuatan, target) {
+                this.power = this.power - kekuatan;
+                target.power = target.power - kekuatan;
+            }
+        }
+        let musuh = {
+            nama : "eka",
+            power : 5000,
+        }
+
+        function run() {
+            console.log('Jagoan ' + jagoan.nama + ' Kekuatan ' + jagoan.power);
+            console.log('Musuh ' + musuh.nama + ' Kekuatan ' + musuh.power);
+            jagoan.makan(2500);
+            console.log('Jagoan makan di wr padang ' + jagoan.nama + ' Kekuatan ' + jagoan.power);
+            jagoan.pukul(7000, musuh)
+            console.log('Jagoan pukul musuh');
+            console.log('Jagoan makan di wr padang ' + jagoan.nama + ' Kekuatan ' + jagoan.power);
+            console.log('Musuh ' + musuh.nama + ' Kekuatan ' + musuh.power);
+        }
+    </script>
+</head>
+<body onload="run()">
+    
+</body>
+</html>

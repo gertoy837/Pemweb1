@@ -1,0 +1,35 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: #ff0000;
+    margin: 10px;
+    float: right;
+}
+
+.box-1 {
+    background-image: url(../img/bird1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-2 {
+    background-image: url(../img/bird2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-3 {
+    background-image: url(../img/bird3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-4 {
+    background-image: url(../img/bird4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
